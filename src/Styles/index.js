@@ -25,4 +25,29 @@ export default createGlobalStyle`
         width: 200px;
         height: 200px;
     }
+
+    div.CardsContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    div.CardUserContainer {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+
+    div.CardRepositorieContainer {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
 `;

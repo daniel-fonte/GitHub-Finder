@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import SearchBox from './Components/SearchBox';
+import UserCard from './Components/UserCard';
 import logo from './Media/img/logo.png';
 import { reducer } from './store/ducks/github';
 import GlobalStyle from './Styles';
@@ -19,6 +20,12 @@ function App() {
       </div>
       <Provider store={store}>
         <SearchBox />
+        <div className="CardsContainer">
+          <div className="CardUserContainer">
+            <UserCard />
+          </div>
+          <div className="CardRepositorieContainer" />
+        </div>
       </Provider>
     </>
   );

@@ -67,10 +67,10 @@ export function errorFetch() {
 export const fetchUser = (username) => async (dispatch) => {
   try {
     dispatch(startFetch());
-    const user = await api.get(`/users/${username}`).data;
-    const repos = await api.get(`/users/${username}/repos`).data;
+    const user = await api.get(`/users/${username}`);
+    const repos = await api.get(`/users/${username}/repos`);
 
-    return dispatch(successFetch(user, repos));
+    return dispatch(successFetch(user.data, repos.data));
   } catch (error) {
     return dispatch(errorFetch());
   }
