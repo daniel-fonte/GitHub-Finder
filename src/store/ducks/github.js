@@ -64,18 +64,14 @@ export function errorFetch() {
 }
 
 // Middlewares
-export function fetchUser(username) {
-  async function fetctUserAsync(dispatch) {
-    try {
-      dispatch(startFetch());
-      const user = await api.get(`/users/${username}`).data;
-      const repos = await api.get(`/users/${username}/repos`).data;
+export const fetchUser = (username) => async (dispatch) => {
+  try {
+    dispatch(startFetch());
+    const user = await api.get(`/users/${username}`).data;
+    const repos = await api.get(`/users/${username}/repos`).data;
 
-      return dispatch(successFetch(user, repos));
-    } catch (error) {
-      return dispatch(errorFetch());
-    }
+    return dispatch(successFetch(user, repos));
+  } catch (error) {
+    return dispatch(errorFetch());
   }
-
-  return fetctUserAsync();
-}
+};
