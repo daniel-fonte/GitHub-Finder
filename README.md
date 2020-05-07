@@ -30,11 +30,11 @@ Programming language
 <h2>Getting Stared</h2>
 
 1. Clone this repo using: `git clone https://github.com/daniel-fonte/GitHub-Finder.git`
-2. Move yourself to the appropriate directory: `cd GitHub-Finder`
+2. Move yourself to the appropriate directory: `cd githubfinder`
 3. Run `yarn` on folder to install dependencies
 
 ### Getting stared frontend app
-1. Move yourl to the frontend folder: `cd aircnc-frontend`
+1. Move yourl to the frontend folder: `cd githubfinder`
 2. Run `yarn start` to start the application web
 
 ## License
