@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
+    position: relative;
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -45,7 +46,7 @@ export default styled.div`
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 10px auto;
+        margin: 15px auto;
     }
 
     div.repoLanguage h1 {
@@ -60,18 +61,21 @@ export default styled.div`
     }
 
     div.repoDownload {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        margin-bottom: -10px;
         cursor: pointer;
-        width: 105%;
-        background-color: #39f440;
+        width: 104.5%;
+        background-color: ${(props) => (props.skeleton ? '#444' : '#39f440')};
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+  
         
         transition: background-color 1s;
+        left: 0px;
+        bottom: -10px;
     }
 
     div.repoDownload:hover {
