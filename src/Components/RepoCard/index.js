@@ -65,13 +65,15 @@ export default function RepoCard() {
 
         </Container>
       ))
-      : (
-        <>
-          {' '}
-          <Skeleton />
-          {' '}
-          <Skeleton />
-        </>
-      )
+      : Load === true
+        ? (
+          <>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </>
+        )
+        : null
   );
 }

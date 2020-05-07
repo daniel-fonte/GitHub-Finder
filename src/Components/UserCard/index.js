@@ -2,6 +2,7 @@ import Octicons, { Location, Organization } from '@primer/octicons-react';
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import SkeletonUser from './skeleton';
 import Container from './styles';
 
 export default function UserCard() {
@@ -56,6 +57,6 @@ export default function UserCard() {
            }
         </Container>
       )
-      : null
+      : Load === true ? <SkeletonUser /> : null
   );
 }
