@@ -16,7 +16,11 @@ export default function UserCard() {
           </div>
           <div className="userNames">
             <h1>{User.name}</h1>
-            <h2>{User.login}</h2>
+            <h2>
+              <a href={User.html_url} target="_self">
+                {User.login}
+              </a>
+            </h2>
           </div>
 
           {

@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
+import RepoCard from './Components/RepoCard';
 import SearchBox from './Components/SearchBox';
 import UserCard from './Components/UserCard';
 import logo from './Media/img/logo.png';
@@ -24,7 +25,9 @@ function App() {
           <div className="CardUserContainer">
             <UserCard />
           </div>
-          <div className="CardRepositorieContainer" />
+          <div className="CardRepositorieContainer">
+            <RepoCard />
+          </div>
         </div>
       </Provider>
     </>

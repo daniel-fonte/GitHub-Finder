@@ -70,6 +70,10 @@ export const fetchUser = (username) => async (dispatch) => {
     const user = await api.get(`/users/${username}`);
     const repos = await api.get(`/users/${username}/repos`);
 
+    repos.data.forEach((repo) => {
+      repo.archive_url = repo.archive_url.replace('{archive_format}{/ref}', 'zipball/master');
+    });
+
     return dispatch(successFetch(user.data, repos.data));
   } catch (error) {
     return dispatch(errorFetch());

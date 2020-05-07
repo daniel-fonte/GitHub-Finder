@@ -30,7 +30,7 @@ export default styled.div`
         padding-bottom: 10px;
     }
 
-    div.userNames h1 {
+    div.userNames h1  {
         font-size: 20px;
         color: #2196f3;
         font-weight: bold;
@@ -40,6 +40,10 @@ export default styled.div`
         font-size: 18px;
         color: #673ab7;
         font-weight: bold;
+    }
+
+    div.userNames a:hover {
+        text-decoration: underline;
     }
 
     div.userBio {

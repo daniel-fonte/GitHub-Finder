@@ -9,6 +9,10 @@ export default createGlobalStyle`
         font-family: sans-serif;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     body {
         background-color: #1a1919 ;
     }
@@ -46,8 +50,9 @@ export default createGlobalStyle`
     div.CardRepositorieContainer {
         width: 80%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
-        padding: 10px 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 `;
